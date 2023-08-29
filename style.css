@@ -1,0 +1,50 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: gray;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: green;
+}
+
+nav a i {
+  font-size: x-large;
+}
+
+main {
+  margin: auto;
+  width: 90%;
+}
+
+.project-container {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto;
+}
+
+.project-card {
+  text-align: center;
+}
+
+.project-card li {
+  list-style-type: none;
+}
