@@ -1,21 +1,24 @@
 const projectComponent = (project) => {
-  console.log(project);
   return `
+  <a href=${project.link} target="_blank">
     <div class="project-card">
-        <h3>${project.name}</h3>
-        <picture>
-            <img src=${project.image} alt=${project.name}>
-        </picture>
-        <p>${project.description}</p>
-        <p>Made with:</p>
-        <ul>
-         ${project.tools
-           .map((tool) => {
-             return `<li>${tool}</li>`;
-           })
-           .join("")}
-        </ul>
+        <img src=${project.image} alt=${project.name}>
+        <div class="project-card-description">
+          <h3>${project.name}</h3>
+          <p>${project.description}</p>
+        </div>
+        <div class="project-card-tools">
+          <p>Made with</p>
+          <ul>
+            ${project.tools
+              .map((tool) => {
+                return `<li>${tool}</li>`;
+              })
+              .join("")}
+          </ul>
+        </div>
     </div>
+  </a>
     `;
 };
 
